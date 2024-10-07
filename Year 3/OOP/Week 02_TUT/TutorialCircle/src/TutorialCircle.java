@@ -4,6 +4,7 @@ public class TutorialCircle {
         Circle circleOne = new Circle();
         System.out.println(circleOne.getRadius());
         System.out.println(circleOne.getArea());
+        System.out.println(circleOne);
 
         Circle circleTwo = new Circle(7);
         System.out.println(circleTwo.getRadius());
