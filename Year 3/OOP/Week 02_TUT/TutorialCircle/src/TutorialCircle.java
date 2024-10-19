@@ -14,5 +14,8 @@ public class TutorialCircle {
         System.out.println(circleThree.getRadius());
         System.out.println(circleThree.getColor());
         System.out.println(circleThree.getArea());
+
+        System.out.println(circleThree.toString());
+        System.out.println(circleThree);
     }
 }

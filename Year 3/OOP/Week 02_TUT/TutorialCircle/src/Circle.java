@@ -34,4 +34,8 @@ public class Circle {
         return color;
     }
 
+    public String toString(){
+        return(String.format("Circle withe radius of %.2f and color of %s has an area of %.2f", radius, color, getArea()));
+    }
+
 }
