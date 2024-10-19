@@ -35,6 +35,6 @@ public class Director {
 
 
     public String toString() {
-        return ("Director [ name = " + name + " surname = " + surname + " dob = " + Dob.dateString() + " movies directed = " + numDirectedMovie);
+        return ("Director [ name = " + name + " surname = " + surname + " dob = " + Dob.dateString() + " movies directed = " + numDirectedMovie + "]");
     }
 }
