@@ -2,13 +2,20 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Circle circle = new Circle(true, "red", 7);
-        System.out.println(circle);
+//        Circle circle = new Circle(true, "red", 7);
+//        System.out.println(circle);
+//
+//        Square square = new Square(false, "Green",4);
+//        System.out.println(square);
+//
+//        Rectangle rectangle = new Rectangle(true, "Orange", 14, 20);
+//        System.out.println(rectangle);
 
-        Square square = new Square(false, "Green",4);
-        System.out.println(square);
+        ShapeCollection runner = new GeometricShapeCollection(10);
+        boolean exit = false;
 
-        Rectangle rectangle = new Rectangle(true, "Orange", 14, 20);
-        System.out.println(rectangle);
+        while (!exit){
+            exit = runner.runMenu();
+        }
     }
 }

@@ -34,6 +34,6 @@ public abstract class GeometricObject {
 
     @Override
     public String toString() {
-        return String.format("color : %s%nFill : %b%n", getColor(), isFilled());
+        return String.format("{ color : %s%nFill : %b }%n", getColor(), isFilled());
     }
 }

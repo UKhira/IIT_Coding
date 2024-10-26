@@ -49,6 +49,6 @@ public class Rectangle extends  GeometricObject{
 
     @Override
     public String toString() {
-        return String.format("Type : %s%n%sArea : %f%nPerimeter : %f%n", getShape(), super.toString(), getArea(), getPerimeter());
+        return String.format("{ Type : %s%n%sArea : %f%nPerimeter : %f }%n", getShape(), super.toString(), getArea(), getPerimeter());
     }
 }
