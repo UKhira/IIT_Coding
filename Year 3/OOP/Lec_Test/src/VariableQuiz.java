@@ -18,5 +18,7 @@ public class VariableQuiz {
         obj2.instanceVar = 25;
 
         System.out.println(obj1.staticVar+" "+obj1.instanceVar);
+
+        System.out.println(Math.PI);
     }
 }
