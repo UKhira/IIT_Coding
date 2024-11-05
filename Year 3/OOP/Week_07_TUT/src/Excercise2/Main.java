@@ -7,7 +7,7 @@ public class Main {
         arrayListInitializer();
     }
 
-    public static void listDemo(ArrayList<Integer> list){
+    public static void listDemo(@org.jetbrains.annotations.NotNull ArrayList<Integer> list){
         for(int i = 0; i < list.size(); i++){
             int element = list.get(i);
             list.remove(i);
