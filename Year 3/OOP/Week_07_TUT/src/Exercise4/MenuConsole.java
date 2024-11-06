@@ -1,5 +1,7 @@
 package Exercise4;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 
 public class MenuConsole {
@@ -44,7 +46,7 @@ public class MenuConsole {
         placeBooksOnShelves(bookList);
     }
 
-    public static void placeBooksOnShelves(ArrayList <Book> bookList){
+    public static void placeBooksOnShelves(@NotNull ArrayList <Book> bookList){
         HashMap<Book, Integer> hashMap = new HashMap<Book, Integer>();
 
         for(int i = 0; i < bookList.size(); i++){
@@ -56,7 +58,7 @@ public class MenuConsole {
         viewShelf(hashMap);
     }
 
-    public static void viewShelf(HashMap<Book,Integer> shelfList){
+    public static void viewShelf(@NotNull HashMap<Book,Integer> shelfList){
         System.out.println("Enter the shelf you want to view ");
         int shelfNo = scanner.nextInt();
 

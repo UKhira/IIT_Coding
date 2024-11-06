@@ -5,10 +5,10 @@ public class ArrayLists {
     public static void main(String[] args) {
         ArrayList <String> arrayList = new ArrayList<String>();
 
-        arrayList.addFirst("0th Index");
+        arrayList.add(0,"0th Index");
         arrayList.add(1, "1st Index");
         arrayList.set(1,"Override");
-        arrayList.addLast("Last Index");
+        arrayList.add("Last Index");
         System.out.println(arrayList.contains("Last Index"));
         System.out.println(arrayList.size());
 
