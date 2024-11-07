@@ -1,0 +1,4 @@
+This is a sample File to test ReadString Java Class
+This is a line
+This is the 3rd Line
+This is last line
