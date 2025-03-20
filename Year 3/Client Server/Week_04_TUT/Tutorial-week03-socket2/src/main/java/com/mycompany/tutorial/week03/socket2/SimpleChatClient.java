@@ -4,32 +4,22 @@
  */
 package com.mycompany.tutorial.week03.socket2;
 
-
 /* **Import necessary packages */
-
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.util.Scanner;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 /* **Define a public class named SimpleChatClient. This class will contain all the logic for our chat client program.** */
 public class SimpleChatClient {
-
-    private static final Logger logger = Logger.getLogger(SimpleChatClient.class.getName());
-
-    static {
-        try {
-            FileHandler fileHandler = new FileHandler("logs.txt", true);
-            logger.addHandler(fileHandler);
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to set up file handler for logger", e);
-        }
-    }
-
+    
+    private static final Logger logger = Logger.getLogger(Class.class.getName());
+    
     /* **Define the main method. This is the entry point for any Java application.** */
     public static void main(String[] args) {
 
@@ -80,12 +70,25 @@ public class SimpleChatClient {
 
                 /* **Print the server's response to the console.** */
                 System.out.println("Server: " + responseMessage);
+                logger.info("Sent response to client " + responseMessage);
             }
 
         /* **Catch any IOException that may occur and print the stack trace. 
             An IOException is thrown when an input-output operation is failed or interrupted.** */
         } catch (IOException e) {
             e.printStackTrace();
+            logger.log(Level.SEVERE, "IOException occurred", e);
+        }
+    }
+
+    static {
+        try{
+            FileHandler fileHandler = new FileHandler("logs.txt", true);
+            fileHandler.setFormatter(new SimpleFormatter());
+            logger.addHandler(fileHandler);
+        }
+        catch (IOException e){
+            logger.log(Level.SEVERE, "Failed to set up file handler for logger", e);
         }
     }
 }

@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package com.mycompany.tutorial.week03.socket2;
 
 import java.io.IOException;
@@ -12,28 +13,20 @@ import java.net.Socket;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class SimpleChatServer {
 
-    private static final Logger logger = Logger.getLogger(SimpleChatServer.class.getName());
-
-    static {
-        try {
-            FileHandler fileHandler = new FileHandler("logs.txt", true);
-            logger.addHandler(fileHandler);
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to set up file handler for logger", e);
-        }
-    }
+    private static final Logger logger = Logger.getLogger(Class.class.getName());
 
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(5000);
-            System.out.println("Server is running and waiting for a client to connect...");
+            logger.info("Server is running and waiting for a client to connect...");
 
             // Wait for a client to connect
             Socket clientSocket = serverSocket.accept();
-            System.out.println("Client connected: " + clientSocket.getInetAddress());
+            logger.info("Client connected: " + clientSocket.getInetAddress());
 
             // Input stream to receive messages from the client
             InputStream inputStream = clientSocket.getInputStream();
@@ -47,6 +40,7 @@ public class SimpleChatServer {
             while ((bytesRead = inputStream.read(buffer)) != -1) {
                 String message = new String(buffer, 0, bytesRead);
                 System.out.println("Client: " + message);
+                logger.info("Received from Client: " + message);
 
                 // Send a response back to the client
                 String responseMessage = "Server received your message: " + message;
@@ -59,6 +53,18 @@ public class SimpleChatServer {
 
         } catch (IOException e) {
             e.printStackTrace();
+            logger.log(Level.SEVERE, "IOException occurred", e);
+        }
+    }
+
+    static{
+        try{
+            FileHandler fileHandler = new FileHandler("logs.txt", true);
+            fileHandler.setFormatter(new SimpleFormatter());
+            logger.addHandler(fileHandler);
+        }
+        catch(IOException e){
+            logger.log(Level.SEVERE, "Failed to set up file handler for Logger", e);
         }
     }
 }
