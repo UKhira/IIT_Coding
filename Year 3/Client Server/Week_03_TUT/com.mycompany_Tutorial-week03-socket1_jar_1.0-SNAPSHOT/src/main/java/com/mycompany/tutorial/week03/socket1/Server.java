@@ -31,55 +31,62 @@ public class Server{
 
     /* **Define the main method. This is the entry point for any Java application. 
     The Java Virtual Machine (JVM) calls the main method when the program starts.** */
-   public static void main(String[] args){}
+   public static void main(String[] args){
 
         /* **Define a final integer variable for the port number. 12345 is used here. 
         The server will listen on this port for incoming client connections.** */
-        
+        final int portNumber = 12345;
 
         /* **Try to establish a server socket on the specified port number. 
         The ServerSocket class constructor takes one parameter: the port number. The try-with-resources statement ensures that the server socket is closed when it is no longer needed.** */
-        
+        try{
+        ServerSocket serverSocket = new ServerSocket(portNumber);
 
             /* **Print a message to the console indicating that the server is listening on the specified port.** */
-            
+            System.out.println("Server is listening on Port " + portNumber);
 
             /* **Enter an infinite loop where the server will continuously listen for and accept incoming client connections.** */
-            
+            while(true){
 
                 /* **Accept an incoming client connection. The accept method of the ServerSocket class blocks
                 until a connection is made, and then returns a new Socket object representing the client connection.** */
-                
+                Socket clientSocket = serverSocket.accept();
 
-                /* **Print a message to the console indicating that a client has connected. 
+                 /* **Print a message to the console indicating that a client has connected.
                 The getInetAddress method of the Socket class returns the IP address of the client.** */
+                System.out.println("Client has connected successfully: " + clientSocket.getInetAddress());
 
-
-                /* **Create a BufferedReader object for reading incoming messages from the client. 
+                 /* **Create a BufferedReader object for reading incoming messages from the client.
                 The BufferedReader class constructor takes an InputStreamReader, which in turn takes the client socket's input stream.** */
+                BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-
-                /* **Create a PrintWriter object for sending messages to the client. 
-                The PrintWriter class constructor takes two parameters: the client socket's output stream 
+                /* **Create a PrintWriter object for sending messages to the client.
+                The PrintWriter class constructor takes two parameters: the client socket's output stream
                 and a boolean indicating whether to automatically flush the output stream after every write operation.** */
+                PrintWriter writer = new PrintWriter(clientSocket.getOutputStream(), true);
 
-
-                /* **Read a message from the client and store it in a string variable. 
+                /* **Read a message from the client and store it in a string variable.
                 The readLine method of the BufferedReader class reads a line of text from the client.** */
-
+                String message = reader.readLine();
 
                 /* **Print the client's message to the console.** */
+                System.out.println("Client Message: " + message);
 
-
-                /* **Send a response back to the client. The println method of the PrintWriter class 
+                 /* **Send a response back to the client. The println method of the PrintWriter class
                 sends a string followed by a newline to the client.** */
+                writer.println("Message received");
 
-
-                /* **Close the client socket. The close method of the Socket class closes the client socket and 
+                   /* **Close the client socket. The close method of the Socket class closes the client socket and
                 releases all associated resources.** */
-
-
-        /* **Catch any IOException that may occur and print the stack trace. 
+                clientSocket.close();
+            }
+        }
+        /* **Catch any IOException that may occur and print the stack trace.
             An IOException is thrown when an input-output operation is failed or interrupted.** */
+        catch(IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
        
