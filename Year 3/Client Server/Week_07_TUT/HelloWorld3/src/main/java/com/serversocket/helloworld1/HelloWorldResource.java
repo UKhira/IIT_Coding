@@ -34,6 +34,12 @@ public class HelloWorldResource {
         return users.get(userid);
     }
 
+    @GET
+    @Path("/allUsers")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Map<Integer, String> getAllUsers(){
+        return users;
+    }
 
 }
 
