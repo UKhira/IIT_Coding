@@ -49,4 +49,48 @@ public class StudentResource {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
     }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response createStudent(Student student){
+        if(student.getFirstName() == null || student.getLastName() == null){
+            return Response.status(Response.Status.BAD_REQUEST).entity("First name and last name are required.").build();
+        }
+        student.setId(UUID.randomUUID().toString());
+        studentStore.put(student.getId(), student);
+        return Response.status(Response.Status.CREATED).entity(student).build();
+    }
+
+
+    @Path(("/{id}"))
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateStudent(@PathParam("id") String id, Student updatedStudent){
+        if(!studentStore.containsKey(id)) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+        Student existingStudent = studentStore.get(id);
+        if (updatedStudent.getFirstName() != null) {
+            existingStudent.setFirstName(updatedStudent.getFirstName());
+        }
+        if (updatedStudent.getLastName() != null) {
+            existingStudent.setLastName(updatedStudent.getLastName());
+        }
+
+        studentStore.put(id, existingStudent);
+        return Response.ok(existingStudent).build();
+    }
+
+    @DELETE
+    @Path("/{id}")
+    public Response deleteStudent(@PathParam("id") String id) {
+        Student removedStudent = studentStore.remove(id);
+        if (removedStudent != null) {
+            return Response.status(Response.Status.NO_CONTENT).build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).entity("Student not found.").build();
+        }
+    }
 }
