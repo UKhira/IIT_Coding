@@ -4,7 +4,7 @@
  */
 package com.coursework.csa_cw.resources;
 
-import com.coursework.csa_cw.Author;
+import com.coursework.csa_cw.model.Author;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

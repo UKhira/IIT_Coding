@@ -4,8 +4,7 @@
  */
 package com.coursework.csa_cw.resources;
 
-import com.coursework.csa_cw.Book;
-import com.coursework.csa_cw.Customer;
+import com.coursework.csa_cw.model.Customer;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
