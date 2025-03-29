@@ -8,14 +8,15 @@ package com.example.model;
  *
  * @author Udith
  */
-public class Student {
+public class Teacher {
+
     private int id;
     private String name;
 
-    public Student() {
+    public Teacher() {
     }
 
-    public Student(int id, String name) {
+    public Teacher(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -35,13 +36,4 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
 }

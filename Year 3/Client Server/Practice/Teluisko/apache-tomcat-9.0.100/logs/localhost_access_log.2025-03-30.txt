@@ -1,0 +1,7 @@
+127.0.0.1 - - [30/Mar/2025:04:45:56 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - Udith [30/Mar/2025:04:45:56 +0530] "GET /manager/text/ HTTP/1.1" 200 39
+127.0.0.1 - - [30/Mar/2025:04:45:56 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - Udith [30/Mar/2025:04:45:56 +0530] "GET /manager/text/ HTTP/1.1" 200 39
+127.0.0.1 - - [30/Mar/2025:04:45:56 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - Udith [30/Mar/2025:04:45:56 +0530] "GET /manager/text/ HTTP/1.1" 200 39
+127.0.0.1 - - [30/Mar/2025:04:45:57 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -

@@ -22,16 +22,5 @@ import java.util.logging.Logger;
 @Path("/customers")
 public class CustomerResource {
 
-    private static final Logger logger = Logger.getLogger(CustomerResource.class.getName());
-    private static final List<Customer> customers = new ArrayList<>();
-
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<Customer> getAllCustomers(){
-        if(customers.isEmpty()){
-            logger.info("No Available customers.");
-        };
-        return customers;
-    }
     
 }
