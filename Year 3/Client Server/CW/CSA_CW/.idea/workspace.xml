@@ -7,23 +7,14 @@
     <list default="true" id="7c5c6858-1be1-4c15-b4be-622d0882ca50" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/AuthorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/AuthorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/BookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/model/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/AuthorResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/AuthorResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/BookResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/BookResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/CustomerResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/CustomerResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/catalina.2025-03-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/catalina.2025-03-28.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/localhost_access_log.2025-03-28.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/localhost_access_log.2025-03-28.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/manager.2025-03-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/manager.2025-03-28.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/dao/ModuleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/dao/ModuleDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/dao/StudentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/dao/TeacherDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/dao/TeacherDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/model/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/model/Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/model/Taacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/model/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/resource/ModuleResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/resource/ModuleResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/resource/StudentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/resource/StudentResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/resource/TeacherResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/java/com/example/resource/TeacherResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_09_TUT/Excercise01/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/catalina.2025-03-30.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/catalina.2025-03-30.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/localhost.2025-03-30.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/localhost.2025-03-30.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/localhost_access_log.2025-03-30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/localhost_access_log.2025-03-30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/manager.2025-03-30.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/Teluisko/apache-tomcat-9.0.100/logs/manager.2025-03-30.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +57,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BookDAO.executor": "Run",
     "Application.BookResource.executor": "Run",
     "Application.ISBNGenerator.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",

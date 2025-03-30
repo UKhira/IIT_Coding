@@ -8,32 +8,49 @@ import java.util.logging.Logger;
 
 public class AuthorDAO {
 
-//  ArrayList to add Author object created within everywhere (static)
+    /**
+     * <b>ArrayList to store all Author Objects which will created or modified</b>
+     */
     private static List<Author> authorList = new ArrayList<>();
 
-//    Logger
+    /**
+     * <b>Logger to keep system logs in terminal</b>
+     */
     private static final Logger logger = Logger.getLogger(AuthorDAO.class.getName());
 
-//    initialize list with some objects
+    /**
+     * Static block to initialize AuthorList with sample records
+     */
     static{
         authorList.add(new Author(1, "Conan Doyle", "Memories and Adventure"));
         authorList.add(new Author(2, "Enid Blyton", "Enid Blyton: The Biography"));
     }
 
-//    Add new author/s
+    /**
+     * This Method will add Author objects to the List, If author Id is not supplied by a user, it will call getNextAuthorId() method and generate an Id. If the user has sent the Id, it will be set
+     * @param newAuthor
+     */
     public void addAuthor(Author newAuthor){
-        int authorId = getNextAuthorId();
-        newAuthor.setId(authorId);
+        if(newAuthor.getId() == 0) {    // This condition will pick user not sending authorIds
+            newAuthor.setId(getNextAuthorId());
+        }
         authorList.add(newAuthor);
         logger.info("Author successfully added");
     }
 
-//    Get all Authors
+    /**
+     * This method will return the List of Authors
+     * @return AuthorList
+     */
     public List<Author> getAllAuthors(){
         return authorList;
     }
 
-//      Get an Author by Id
+    /**
+     * This method will search a relevant author record for a given ID, if ID is not found return a null;
+     * @param authorId
+     * @return specific Author object by given ID
+     */
     public Author getAuthorById(int authorId){
         for(Author author: authorList){
             if(author.getId() == authorId){
@@ -43,12 +60,15 @@ public class AuthorDAO {
         return null;
     }
 
-//    Update an existing author
-    public void updateAuthor(Author authorToBeUpdated){
-        System.out.println("Method called");
+    /**
+     * This method will update an existing object in AuthorList by given ID, If no ID found it will output a warning level log
+     * @param id
+     * @param authorToBeUpdated
+     */
+    public void updateAuthor(int id, Author authorToBeUpdated){
         for(int i = 0; i < authorList.size(); i++){
             Author currentAuthor = authorList.get(i);
-            if(currentAuthor.getId() == authorToBeUpdated.getId()){
+            if(currentAuthor.getId() == id){
                 authorList.set(i, authorToBeUpdated);
                 logger.info("Author successfully updated");
             }
@@ -56,11 +76,18 @@ public class AuthorDAO {
         logger.warning("No Matching record");
     }
 
-//    Remove an author
+    /**
+     * This method will remove an Author from list for a given ID, If exists
+     * @param authorid
+     */
     public void deleteAuthor(int authorid){
         authorList.removeIf(author ->  author.getId() == authorid);
     }
 
+    /**
+     * This method will return next index which can get as author ID from authorList
+     * @return
+     */
     public int getNextAuthorId() {
         int idTracker = 0;
         for (Author author : authorList) {

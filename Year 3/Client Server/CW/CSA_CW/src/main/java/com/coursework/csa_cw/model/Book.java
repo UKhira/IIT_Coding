@@ -12,7 +12,7 @@ public class Book {
 
     private int id;
     private String title;
-    private Author author;
+    private int authorId;
     private String ISBN;
     private int pubYear;
     private double price;    //In LKR
@@ -22,9 +22,10 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, Author author, String ISBN, int pubYear, double price, int stockQty) {
+    public Book(int id, String title, int authorId, String ISBN, int pubYear, double price, int stockQty) {
+        this.id = id;
         this.title = title;
-        this.author = author;
+        this.authorId = authorId;
         this.ISBN = ISBN;
         this.pubYear = pubYear;
         this.price = price;
@@ -47,12 +48,12 @@ public class Book {
         this.title = title;
     }
 
-    public Author getAuthor() {
-        return this.author;
+    public int getAuthorId() {
+        return this.authorId;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthor(int authorId) {
+        this.authorId = authorId;
     }
 
     public String getISBN() {

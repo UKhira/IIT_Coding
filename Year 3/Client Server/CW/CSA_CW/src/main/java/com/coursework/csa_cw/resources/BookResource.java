@@ -4,16 +4,14 @@
  */
 package com.coursework.csa_cw.resources;
 
+import com.coursework.csa_cw.dao.BookDAO;
 import com.coursework.csa_cw.model.Author;
 import com.coursework.csa_cw.model.Book;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Logger;
+import javax.ws.rs.core.Response;
+
 
 /**
  *
@@ -23,5 +21,42 @@ import java.util.logging.Logger;
 @Path("/books")
 public class BookResource {
 
+    private BookDAO bookDAO = new BookDAO();
 
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addBook(Book newBook) {
+        boolean validBookAdd = bookDAO.addBook(newBook);
+        if (validBookAdd) {
+            return Response.status(Response.Status.CREATED).entity("Book successfully added").build();
+        } else {
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid author ID").build();
+
+        }
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllBooks(){
+        return Response.status(200).entity(bookDAO.getAllBooks()).build();
+    }
+
+    @GET
+    @Path(("/{id}"))
+    @Produces(MediaType.APPLICATION_JSON)
+    public Book getBookById(@PathParam("id") int bookId){
+        return bookDAO.getBookById(bookId);
+    }
+
+    @PUT
+    @Path(("/{id}"))
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response updateBook(@PathParam("id") int bookId, Book updatedBook){
+        boolean isUpdated = bookDAO.updateBookById(bookId, updatedBook);
+        if (isUpdated) {
+            return Response.status(Response.Status.OK).entity("Book successfully updated").build();
+        } else {
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid author ID or book not found").build();
+        }
+    }
 }
