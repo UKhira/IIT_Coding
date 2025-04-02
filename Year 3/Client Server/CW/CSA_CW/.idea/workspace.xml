@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c5c6858-1be1-4c15-b4be-622d0882ca50" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/AuthorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/AuthorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/BookDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/dao/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/BookResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/BookResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/CustomerResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/resources/CustomerResource.java" afterDir="false" />
-    </list>
+    <list default="true" id="7c5c6858-1be1-4c15-b4be-622d0882ca50" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
