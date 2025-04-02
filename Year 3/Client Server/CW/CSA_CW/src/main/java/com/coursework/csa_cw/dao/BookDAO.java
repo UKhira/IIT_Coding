@@ -92,12 +92,17 @@ public class BookDAO {
                     bookList.set(i, updatedBook);
                     return true;
                 }
-                System.out.println("Level 2 check");
             }
-            System.out.println("Level 3 check");
         }
-        System.out.println("Final check");
         return false;
+    }
+
+    /**
+     * This method will remove a Book from list for a given ID, If exists
+     * @param bookId
+     */
+    public void deleteBook(int bookId){
+        bookList.removeIf(book -> book.getId() == bookId);
     }
 
     /**

@@ -4,6 +4,9 @@
  */
 package com.coursework.csa_cw.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Udith
@@ -14,13 +17,16 @@ public class Customer {
     private String firstName;
     private String lastName;
     private String email;
-    private int password;
+    private String password;
+
+    private List<Book> cart = new ArrayList<>();
 
 //    For JSON
     public Customer() {
     }
 
-    public Customer(String firstName, String lastName, String email, int password) {
+    public Customer(int id, String firstName, String lastName, String email, String password) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -59,11 +65,19 @@ public class Customer {
         this.email = email;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return this.password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Book> getCart(){
+        return this.cart;
+    }
+
+    public void setCart(List<Book> cart){
+        this.cart = cart;
     }
 }

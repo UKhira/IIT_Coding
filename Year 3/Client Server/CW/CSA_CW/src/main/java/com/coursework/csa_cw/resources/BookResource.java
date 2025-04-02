@@ -59,4 +59,10 @@ public class BookResource {
             return Response.status(Response.Status.BAD_REQUEST).entity("Invalid author ID or book not found").build();
         }
     }
+
+    @DELETE
+    @Path("/{id}")
+    public void deleteBook(@PathParam("id") int bookId){
+        bookDAO.deleteBook(bookId);
+    }
 }

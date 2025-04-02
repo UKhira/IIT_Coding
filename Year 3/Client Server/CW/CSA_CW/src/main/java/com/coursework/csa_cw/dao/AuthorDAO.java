@@ -50,9 +50,11 @@ public class AuthorDAO {
     public Author getAuthorById(int authorId){
         for(Author author: authorList){
             if(author.getId() == authorId){
+                logger.info("Author details successfully retrieved");
                 return author;
             }
         }
+        logger.warning("Author not found");
         return null;
     }
 
