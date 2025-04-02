@@ -8,19 +8,15 @@ import java.util.logging.Logger;
 
 public class AuthorDAO {
 
-    /**
-     * <b>ArrayList to store all Author Objects which will created or modified</b>
-     */
+//    ArrayList to store all Author Objects which will created or modified</b>
     private static List<Author> authorList = new ArrayList<>();
 
-    /**
-     * <b>Logger to keep system logs in terminal</b>
-     */
+//    Logger to keep system logs in terminal</b>
+
     private static final Logger logger = Logger.getLogger(AuthorDAO.class.getName());
 
-    /**
-     * Static block to initialize AuthorList with sample records
-     */
+//     Static block to initialize AuthorList with sample records
+
     static{
         authorList.add(new Author(1, "Conan Doyle", "Memories and Adventure"));
         authorList.add(new Author(2, "Enid Blyton", "Enid Blyton: The Biography"));
