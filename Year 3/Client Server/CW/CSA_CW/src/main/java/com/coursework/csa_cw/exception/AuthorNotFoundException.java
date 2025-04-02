@@ -1,4 +1,8 @@
 package com.coursework.csa_cw.exception;
 
-public class AuthorNotFoundException {
+public class AuthorNotFoundException extends RuntimeException{
+
+    public AuthorNotFoundException(String message){
+        super(message);
+    }
 }

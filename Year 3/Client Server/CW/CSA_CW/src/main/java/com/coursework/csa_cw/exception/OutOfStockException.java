@@ -1,4 +1,4 @@
 package com.coursework.csa_cw.exception;
 
-public class OutOfStockException {
+public class OutOfStockException extends RuntimeException{
 }

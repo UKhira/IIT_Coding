@@ -1,4 +1,10 @@
 package com.coursework.csa_cw.exception;
 
-public class CustomerNotFoundException {
+import javax.ws.rs.ext.ExceptionMapper;
+
+public class CustomerNotFoundException extends RuntimeException {
+
+    public CustomerNotFoundException(String message){
+        super(message);
+    }
 }
