@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c5c6858-1be1-4c15-b4be-622d0882ca50" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/AuthorNotFoundExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/BookNotFoundExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/CartNotFoundExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/CustomerNotFoundExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/InvalidInputExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/OutOfStockExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Week_10_TUT/Tutorial_Week09_No_DAO/src/main/java/com/example/exception/ModuleNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Week_10_TUT/Tutorial_Week09_No_DAO/src/main/java/com/example/exception/ModuleNotFoundExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Week_10_TUT/Tutorial_Week09_No_DAO/src/main/java/com/example/exception/StudentNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Week_10_TUT/Tutorial_Week09_No_DAO/src/main/java/com/example/exception/StudentNotFoundExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Week_10_TUT/Tutorial_Week09_No_DAO/src/main/java/com/example/exception/TeacherNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Week_10_TUT/Tutorial_Week09_No_DAO/src/main/java/com/example/exception/TeacherNptFoundExceptionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/AuthorNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/AuthorNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/BookNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/BookNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/CartNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/CartNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/CustomerNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/CustomerNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/InvalidInputException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/InvalidInputException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/OutOfStockException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coursework/csa_cw/exception/OutOfStockException.java" afterDir="false" />
-    </list>
+    <list default="true" id="7c5c6858-1be1-4c15-b4be-622d0882ca50" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
