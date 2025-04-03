@@ -1,5 +1,6 @@
 package com.coursework.csa_cw.dao;
 
+import com.coursework.csa_cw.exception.AuthorNotFoundException;
 import com.coursework.csa_cw.model.Author;
 
 import java.util.ArrayList;
@@ -54,8 +55,7 @@ public class AuthorDAO {
                 return author;
             }
         }
-        logger.warning("Author not found");
-        return null;
+        throw new AuthorNotFoundException("Author ID:" + authorId + " Not Found");
     }
 
     /**
@@ -71,15 +71,18 @@ public class AuthorDAO {
                 logger.info("Author successfully updated");
             }
         }
-        logger.warning("No Matching record");
+        throw new AuthorNotFoundException("Author ID:" + id + " Not Found to update");
     }
 
     /**
      * This method will remove an Author from list for a given ID, If exists
-     * @param authorid
+     * @param authorId
      */
-    public void deleteAuthor(int authorid){
-        authorList.removeIf(author ->  author.getId() == authorid);
+    public void deleteAuthor(int authorId){
+        boolean removed = authorList.removeIf(author ->  author.getId() == authorId);
+        if(!removed){
+            throw new AuthorNotFoundException("Author ID:" + authorId + " Not Found to Remove");
+        }
     }
 
     /**

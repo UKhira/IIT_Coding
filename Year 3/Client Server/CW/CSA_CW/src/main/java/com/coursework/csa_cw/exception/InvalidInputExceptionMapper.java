@@ -1,8 +1,18 @@
 package com.coursework.csa_cw.exception;
 
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
+import java.util.logging.Logger;
 
 @Provider
-public class InvalidInputExceptionMapper extends ExceptionMapper<InvalidInputException> {
+public class InvalidInputExceptionMapper implements ExceptionMapper<InvalidInputException> {
+
+    private static final Logger logger = Logger.getLogger(InvalidInputExceptionMapper.class.getName());
+
+    @Override
+    public Response toResponse(InvalidInputException exception) {
+        return Response.status(Response.Status.NOT_FOUND).type(MediaType.TEXT_PLAIN).entity(exception.getMessage()).build();
+    }
 }

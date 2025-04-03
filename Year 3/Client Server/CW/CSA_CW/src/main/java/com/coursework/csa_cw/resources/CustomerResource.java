@@ -6,16 +6,14 @@ package com.coursework.csa_cw.resources;
 
 import com.coursework.csa_cw.dao.BookDAO;
 import com.coursework.csa_cw.dao.CustomerDAO;
-import com.coursework.csa_cw.model.Author;
+
 import com.coursework.csa_cw.model.Book;
 import com.coursework.csa_cw.model.Customer;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 /**
  *
